@@ -11,7 +11,7 @@ canvasの扱い等の練習かねて作った画像にセリフ合成するよ�
 electron版（未完）はelectron必要です（当たり前）  
 
 ## Install&Usage
-ダウンロードして'index.html'をブラウザで開くか、[ここ](http://DJRN_WordsGenerator.github.io/)からアクセス  
+ダウンロードして'index.html'をブラウザで開くか、[ここ](http://butaosuinu.github.io/djrn_wordsgenerator/)からアクセス  
 生成した画像は右クリックで保存できます  
 
 ## Licence
