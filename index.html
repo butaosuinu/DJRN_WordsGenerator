@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DJRN姉貴セリフジェネレータ</title>
+	<link rel="stylesheet" href="main.css">
+	
+</head>
+<body>
+	<h1>DJRN姉貴セリフジェネレータ</h1>
+	<p>※30文字まで</p>
+	<form id="idFormDJRN" name="formDJRN" action="gene.html?getForm" method="GET">
+		<p>セリフ：<input id="idWords" type="text" name="words" size="50" maxlength="30" value=""></p>
+		<p><input type="submit" value="生成"></p>
+	</form>
+	<script type="text/javascript">
+		var getForm = document.formDJRN.words.value;
+	</script>
+	<script type="text/javascript" src="gene.js"></script>
+</body>
+</html>
