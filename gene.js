@@ -1,8 +1,8 @@
-function escapeHTML (html) {
-	var elem = document.createElement('div');
-	elem.appendChild(document.createTextNode(html));
-	return elem.innerHTML;
-}
+// function escapeHTML (html) {
+// 	var elem = document.createElement('div');
+// 	elem.appendChild(document.createTextNode(html));
+// 	return elem.innerHTML;
+// }
 
 // var getForm = "いいぜ";
 var getUrl = location.href.split("?words=")[1];
@@ -21,9 +21,6 @@ function DJRNGenrate() {
 		ctx.fillStyle = "#000000";
 		ctx.font = "60px 'MS PMincho'";
 		ctx.textAlign = "center";
-		ctx.fillText(escapeHTML(getFormData), 275, 95, 500);
+		ctx.fillText(getFormData, 275, 95, 500);
 	}
 };
-
-
-
