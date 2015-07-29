@@ -10,6 +10,17 @@ var getFormData = decodeURIComponent(getUrl);
 onload = function () {
 	DJRNGenrate();
 };
+function getGenerateDate(){
+	var geneTime = new Date();
+	var geneYear = geneTime.getFullYear();
+	var geneMonth = geneTime.getMonth();
+	var geneDate = geneTime.getDate();
+	var geneHours = geneTime.getHours();
+	var geneMinutes = geneTime.getMinutes();
+
+	var generateTime = geneYear + "-" + geneMonth + "-" + geneDate + "-" + geneHours + ":" + geneMinutes;
+	return generateTime;
+}
 function DJRNGenrate() {
 	var canvas = document.getElementById('DJRNDraw');
 	if (!canvas || !canvas.getContext) return false;
@@ -26,11 +37,11 @@ function DJRNGenrate() {
 		// png生成
 		var img_png = canvas.toDataURL("image/png");
 		document.getElementById("pngDL").href = img_png;
-		document.getElementById("pngDL").download = "DJRN_PNG";
+		document.getElementById("pngDL").download = "DJRN-PNG-" + getGenerateDate();
 		// JPG生成
 		var img_jpg = canvas.toDataURL("image/jpeg", "0.5");
 		document.getElementById("jpgDL").href = img_jpg; 
-		document.getElementById("jpgDL").download = "DJRN_JPG";
+		document.getElementById("jpgDL").download = "DJRN-JPG-" + getGenerateDate();
 		
 	}
 };
