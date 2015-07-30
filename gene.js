@@ -36,11 +36,11 @@ function DJRNGenrate() {
 		ctx.fillText(getFormData, 275, 95, 500);
 		// png生成
 		var img_png = canvas.toDataURL("image/png");
-		document.getElementById("pngDL").href = img_png;
+		document.getElementById("pngDL").href = img_png + ".png";
 		document.getElementById("pngDL").download = "DJRN-PNG-" + getGenerateDate();
 		// JPG生成
 		var img_jpg = canvas.toDataURL("image/jpeg", "0.5");
-		document.getElementById("jpgDL").href = img_jpg; 
+		document.getElementById("jpgDL").href = img_jpg + ".jpg"; 
 		document.getElementById("jpgDL").download = "DJRN-JPG-" + getGenerateDate();
 		
 	}
