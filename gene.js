@@ -43,24 +43,24 @@ function DJRNGenrate() {
 		document.getElementById("jpgDL").href = img_jpg;
 		document.getElementById("jpgDL").download = "DJRN-JPG-" + getGenerateDate();
 		// IE対応
-		if (!HTMLCanvasElement.prototype.toBlob) {
-			Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
-				value: function (callback, type, quality) {
-					var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
-					    len = binStr.length,
-					    arr = new Uint8Array(len);
+		// if (!HTMLCanvasElement.prototype.toBlob) {
+		// 	Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+		// 		value: function (callback, type, quality) {
+		// 			var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+		// 			    len = binStr.length,
+		// 			    arr = new Uint8Array(len);
 
-					for (var i=0; i<len; i++ ) {
-					 arr[i] = binStr.charCodeAt(i);
-					}
-					callback( new Blob( [arr], {type: type || 'image/png'} ) );
-				}
-			});
-			var userAsent = window.navigator.userAgent.toLowerCase();
-			if (userAsent.indexOf('msie') != -1) {
-				var ieImgPng = canvas.iePng();
-				document.getElementById("pngDL").href = ieImgPng;
-			}
-		}
+		// 			for (var i=0; i<len; i++ ) {
+		// 			 arr[i] = binStr.charCodeAt(i);
+		// 			}
+		// 			callback( new Blob( [arr], {type: type || 'image/png'} ) );
+		// 		}
+		// 	});
+		// 	var userAsent = window.navigator.userAgent.toLowerCase();
+		// 	if (userAsent.indexOf('msie') != -1) {
+		// 		var ieImgPng = canvas.iePng();
+		// 		document.getElementById("pngDL").href = ieImgPng;
+		// 	}
+		// }
 	}
 };
