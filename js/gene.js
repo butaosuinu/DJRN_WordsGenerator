@@ -27,7 +27,7 @@ function DJRNGenrate() {
 	var ctx =canvas.getContext("2d");
 	var img = new Image();
 	img.crossOrigin = "Anonymous";
-	img.src = "DJRNSilhouette.png?" + Date.now();
+	img.src = "../image/DJRNSilhouette.png?" + Date.now();
 	img.onload = function () {
 		ctx.drawImage(img,0,0);
 		ctx.fillStyle = "#000000";

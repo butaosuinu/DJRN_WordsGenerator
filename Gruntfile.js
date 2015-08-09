@@ -7,65 +7,19 @@ module.exports = function(grunt) {
 		connect:{
 			server:{
 				options:{
-					port: 7000,
+					port: 8000,
 					livereload: true
 				}
 			}
 		},
-
-		// sass:{
-		// 	dist:{
-		// 		options:{
-		// 			style:'expanded'
-		// 		},
-		// 		files:{
-		// 			'css/main.css': 'sass/main.scss'
-		// 		}
-		// 	}
-		// },
-
-		// autoprefixer:{
-		// 	options:{
-		// 		browsers: ['last 2 version', 'ie 9']
-		// 	},
-		// 	dist:{
-		// 		src: ['css/main.css']
-		// 	}
-		// },
-
-		// copy: {
-		// 	dist: {
-		// 		files: [{
-		// 			src: ['css/main.css'],
-		// 			dest: '../C5_theme/collet_hp_c5/'
-		// 		}]
-		// 	}
-		// },
-
-
-
 		watch:{
-			html:{
-				files: '**/*.html',
-				tasks: '',
-				options:{
-					livereload: true
-				}
-			},
-			js: {
-				files: '**/*.js',
+			live:{
+				files: ['**/*.html','**/*.css'],
 				tasks: '',
 				options:{
 					livereload: true
 				}
 			}
-			// sass:{
-			// 	files:['sass/**/*.scss'],
-			// 	tasks:['sass','autoprefixer'],
-			// 	options:{
-			// 		livereload: true
-			// 	}
-			// }
 		}
 	});
 

@@ -8,7 +8,6 @@ canvasの扱い等の練習かねて作った画像にセリフ合成するよ�
 ## Demo
 
 ## Requirement
-electron版（未完）はelectron必要です（当たり前）  
 
 ## Install&Usage
 ダウンロードして'index.html'をブラウザで開くか、[ここ](http://butaosuinu.github.io/DJRN_WordsGenerator/index.html)からアクセス  
